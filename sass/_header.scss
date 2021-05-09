@@ -1,0 +1,39 @@
+.header {
+  background-image: linear-gradient(
+      to bottom right,
+      rgba($color-gradient-red-light, 0.9),
+      rgba($color-gradient-red, 0.9)
+    ),
+    url(../images/bg-pattern-intro.svg);
+  background-size: 160%;
+  background-position: center;
+
+  height: 70vh;
+
+  color: var(--color-white);
+
+  &__intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    list-style: none;
+  }
+
+  &__link:link,
+  &__link:visited {
+    text-decoration: none;
+  }
+}

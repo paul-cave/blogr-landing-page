@@ -1,0 +1,14 @@
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, min-content);
+
+  &__illustration {
+    grid-row: 2 / -1;
+    grid-column: 2 / -1;
+  }
+
+  &__heading {
+    grid-column: span 2;
+  }
+}

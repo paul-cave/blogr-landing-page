@@ -1,0 +1,17 @@
+.infrastructure {
+  background-image: linear-gradient(
+      to bottom right,
+      rgba($color-gradient-blue-dark, 1),
+      rgba($color-gradient-blue, 0.9)
+    ),
+    url(../images/bg-pattern-circles.svg);
+  color: var(--color-white);
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content min-content;
+
+  &__illustration {
+    grid-row: span 2;
+  }
+}
