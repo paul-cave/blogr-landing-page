@@ -1,14 +1,31 @@
 .features {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(5, min-content);
-
-  &__illustration {
-    grid-row: 2 / -1;
-    grid-column: 2 / -1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 5rem 0;
+  &__heading {
+    align-self: center;
+    transform: translateY(10rem);
+  }
+  &__content {
+    display: flex;
+    align-items: center;
   }
 
-  &__heading {
-    grid-column: span 2;
+  &__text {
+    width: 35%;
+    margin-left: auto;
+  }
+
+  &__illustration {
+    width: 45%;
+    height: 100%;
+    margin-left: 8%;
+    overflow: hidden;
+    justify-self: flex-end;
+
+    &--desktop {
+      width: 140%;
+    }
   }
 }

@@ -1,0 +1,28 @@
+.tooling {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  padding: 5rem 0;
+  margin-top: 6rem;
+
+  &__text {
+    width: 35%;
+    margin-right: var(--padding-body-desktop);
+  }
+
+  &__illustration {
+    width: 45%;
+    height: 100%;
+    margin-right: auto;
+    overflow: hidden;
+    justify-self: flex-start;
+    display: flex;
+    justify-content: flex-start;
+
+    &--desktop {
+      width: 150%;
+      transform: translateX(-28.5%);
+    }
+  }
+}

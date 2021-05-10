@@ -22,7 +22,11 @@
   <body>
     <header class="header">
       <nav class="navigation">
-        <img src="./images/logo.svg" alt="blogr logo" class="logo__img" />
+        <img
+          src="./images/logo.svg"
+          alt="blogr logo"
+          class="logo__img navigation__logo"
+        />
         <ul class="navigation__list">
           <li class="navigation__item">Product</li>
           <li class="navigation__item">Company</li>
@@ -43,36 +47,44 @@
       </div>
     </header>
     <section class="features">
-      <h2 class="features__heading heading-2 text--dark">
+      <h2 class="features__heading heading-2 heading--dark">
         Designed for the future
       </h2>
-      <h3 class="heading-3 text--dark">Introducing an extensible editor</h3>
-      <p class="text text--dark">
-        Blogr features an exceedingly intuitive interface which lets you focus
-        on one thing: creating content. The editor supports management of
-        multiple blogs and allows easy manipulation of embeds such as images,
-        videos, and Markdown. Extensibility with plugins and themes provide easy
-        ways to add functionality or change the looks of a blog.
-      </p>
-      <h3 class="heading-3 text--dark">Robust content management</h3>
-      <p class="text text--dark">
-        Flexible content management enables users to easily move through posts.
-        Increase the usability of your blog by adding customized categories,
-        sections, format, or flow. With this functionality, you’re in full
-        control.
-      </p>
-      <div class="features__illustration">
-        <img
-          src="./images/illustration-editor-desktop.svg"
-          alt="editor illsutration"
-          class="features__illustration--desktop"
-        />
-
-        <!-- <img
-          src="./images/illustration-editor-mobile.svg"
-          alt="editor illsutration"
-          class="features__illustration--mobile"
-        /> -->
+      <div class="features__content">
+        <div class="features__text">
+          <h3 class="heading-3 heading--dark">
+            Introducing an extensible editor
+          </h3>
+          <p class="text text--dark">
+            Blogr features an exceedingly intuitive interface which lets you
+            focus on one thing: creating content. The editor supports management
+            of multiple blogs and allows easy manipulation of embeds such as
+            images, videos, and Markdown. Extensibility with plugins and themes
+            provide easy ways to add functionality or change the looks of a
+            blog.
+          </p>
+          <h3 class="heading-3 heading--dark u-margin-top-copy">
+            Robust content management
+          </h3>
+          <p class="text text--dark">
+            Flexible content management enables users to easily move through
+            posts. Increase the usability of your blog by adding customized
+            categories, sections, format, or flow. With this functionality,
+            you’re in full control.
+          </p>
+        </div>
+        <div class="features__illustration">
+          <img
+            src="./images/illustration-editor-desktop.svg"
+            alt="editor illsutration"
+            class="features__illustration--desktop"
+          />
+          <!-- <img
+            src="./images/illustration-editor-mobile.svg"
+            alt="editor illsutration"
+            class="features__illustration--mobile"
+          /> -->
+        </div>
       </div>
     </section>
     <section class="infrastructure">
@@ -81,13 +93,15 @@
         alt="two phones"
         class="infrastructure__illustration"
       />
-      <h2 class="heading-2 text--light">State of the Art Infrastructure</h2>
-      <p class="text text--light">
-        With reliability and speed in mind, worldwide data centers provide the
-        backbone for ultra-fast connectivity. This ensures your site will load
-        instantly, no matter where your readers are, keeping your site
-        competitive.
-      </p>
+      <div class="infrastructure__text">
+        <h2 class="heading-2 text--light">State of the Art Infrastructure</h2>
+        <p class="text text--light">
+          With reliability and speed in mind, worldwide data centers provide the
+          backbone for ultra-fast connectivity. This ensures your site will load
+          instantly, no matter where your readers are, keeping your site
+          competitive.
+        </p>
+      </div>
     </section>
     <section class="tooling">
       <div class="tooling__illustration">
@@ -103,25 +117,33 @@
           class="tooling__illustration--mobile"
         /> -->
       </div>
-      <h3 class="heading-3 text--dark">Free, open, simple</h3>
-      <p class="text text--dark">
-        Blogr is a free and open source application backed by a large community
-        of helpful developers. It supports features such as code syntax
-        highlighting, RSS feeds, social media integration, third-party
-        commenting tools, and works seamlessly with Google Analytics. The
-        architecture is clean and is relatively easy to learn.
-      </p>
-      <h3 class="heading-3 text--dark">Powerful tooling</h3>
-      <p class="text text--dark">
-        Batteries included. We built a simple and straightforward CLI tool that
-        makes customization and deployment a breeze, but capable of producing
-        even the most complicated sites.
-      </p>
+      <div class="tooling__text">
+        <h3 class="heading-3 heading--dark">Free, open, simple</h3>
+        <p class="text text--dark">
+          Blogr is a free and open source application backed by a large
+          community of helpful developers. It supports features such as code
+          syntax highlighting, RSS feeds, social media integration, third-party
+          commenting tools, and works seamlessly with Google Analytics. The
+          architecture is clean and is relatively easy to learn.
+        </p>
+        <h3 class="heading-3 heading--dark u-margin-top-copy">
+          Powerful tooling
+        </h3>
+        <p class="text text--dark">
+          Batteries included. We built a simple and straightforward CLI tool
+          that makes customization and deployment a breeze, but capable of
+          producing even the most complicated sites.
+        </p>
+      </div>
     </section>
     <footer class="footer">
-      <img src="./images/logo.svg" alt="blogr logo" class="logo__img" />
-      <h5 class="heading-5">Product</h5>
-      <ul class="footer__list">
+      <img
+        src="./images/logo.svg"
+        alt="blogr logo"
+        class="logo__img footer__logo"
+      />
+      <h5 class="heading-5 footer__heading--1">Product</h5>
+      <ul class="footer__list footer__list--1">
         <li class="footer__item">
           <a href="#" class="footer__link">Overview</a>
         </li>
@@ -138,8 +160,8 @@
           <a href="#" class="footer__link">Integrations</a>
         </li>
       </ul>
-      <h5 class="heading-5">Company</h5>
-      <ul class="footer__list">
+      <h5 class="heading-5 footer__heading--2">Company</h5>
+      <ul class="footer__list footer__list--2">
         <li class="footer__item"><a href="#" class="footer__link">About</a></li>
         <li class="footer__item"><a href="#" class="footer__link">Team</a></li>
         <li class="footer__item"><a href="#" class="footer__link">Blog</a></li>
@@ -147,8 +169,8 @@
           <a href="#" class="footer__link">Careers</a>
         </li>
       </ul>
-      <h5 class="heading-5">Connect</h5>
-      <ul class="footer__list">
+      <h5 class="heading-5 footer__heading--3">Connect</h5>
+      <ul class="footer__list footer__list--3">
         <li class="footer__item">
           <a href="#" class="footer__link">Contact</a>
         </li>
@@ -159,7 +181,7 @@
           <a href="#" class="footer__link">LinkedIn</a>
         </li>
       </ul>
-      <div class="attribution">
+      <div class="footer__attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a

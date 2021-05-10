@@ -1,19 +1,57 @@
 // font-family: "Ubuntu", sans-serif;
 
-.heading-1 {
+.heading {
+  &-1,
+  &-2,
+  &-3,
+  &-4,
+  &-5 {
+    font-family: "Overpass", sans-serif;
+  }
+
+  &-1 {
+    font-size: 6rem;
+    margin-bottom: 1.5rem;
+  }
+  &-2 {
+    font-size: 3.8rem;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+  }
+  &-3 {
+    font-size: 2.7rem;
+    margin-bottom: 2.5rem;
+  }
+  &-4 {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 4rem;
+  }
+  &-5 {
+    font-size: 1.5rem;
+  }
+  &--dark {
+    color: var(--color-primary-blue);
+  }
 }
-.heading-2 {
+
+.text {
+  line-height: 1.8;
+
+  &--light {
+    color: var(--color-white);
+  }
+  &--dark {
+    color: var(--color-grey-dark);
+  }
 }
-.heading-3 {
-}
-.heading-4 {
-}
-.heading-5 {
+
+.u-margin-top-copy {
+  margin-top: 7rem;
 }
 
 li {
   font-family: "Ubuntu", sans-serif;
-  font-weight: 500;
 }
 
 .btn {
@@ -21,18 +59,30 @@ li {
   font-family: "Ubuntu", sans-serif;
   font-size: 1.4rem;
   text-align: center;
-  font-weight: 500;
+  font-weight: 700;
   display: inline-block;
-  padding: 1.2rem;
+  padding: 1.4rem;
   border-radius: 5rem;
-  width: 12rem;
+  width: 12.5rem;
   &--white {
     background-color: var(--color-white);
     color: var(--color-primary-red);
+
+    &:hover,
+    &:active {
+      background-color: var(--color-primary-red-light);
+      color: var(--color-white);
+    }
   }
   &--transparent {
     background-color: transparent;
     color: var(--color-white);
     border: 1px solid var(--color-white);
+
+    &:hover,
+    &:active {
+      background-color: var(--color-white);
+      color: var(--color-primary-red);
+    }
   }
 }

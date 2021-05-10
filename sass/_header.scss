@@ -8,14 +8,22 @@
   background-size: 160%;
   background-position: center;
 
-  height: 70vh;
+  min-height: 70vh;
+  border-bottom-left-radius: 10rem;
 
-  color: var(--color-white);
+  padding: 5rem var(--padding-body-desktop);
 
   &__intro {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 17vh;
+  }
+
+  &__buttons-start {
+    display: flex;
+    width: 27rem;
+    justify-content: space-between;
   }
 }
 
@@ -23,6 +31,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 0 auto;
+  max-width: 120rem;
+
+  &__logo {
+    margin-right: 6rem;
+  }
 
   &__list {
     display: flex;
@@ -30,10 +44,42 @@
 
   &__item {
     list-style: none;
+    font-weight: 500;
+    color: var(--color-white);
+    opacity: 0.75;
+    position: relative;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 4rem;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url(../images/icon-arrow-light.svg);
+      transform: translateY(0.7rem);
+      margin-left: 0.5rem;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+    }
+
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
   }
 
-  &__link:link,
-  &__link:visited {
+  &__login {
+    margin-left: auto;
+    margin-right: 3rem;
     text-decoration: none;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    display: inline-block;
+    color: var(--color-white);
+    opacity: 0.75;
   }
 }

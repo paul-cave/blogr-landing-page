@@ -1,17 +1,45 @@
 .infrastructure {
-  background-image: linear-gradient(
+  background-image: url(../images/bg-pattern-circles.svg),
+    linear-gradient(
       to bottom right,
       rgba($color-gradient-blue-dark, 1),
-      rgba($color-gradient-blue, 0.9)
-    ),
-    url(../images/bg-pattern-circles.svg);
-  color: var(--color-white);
+      rgba($color-gradient-blue, 1)
+    );
   background-repeat: no-repeat;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: min-content min-content;
+  background-position: -50% 80%;
+  display: flex;
+  align-items: center;
+  height: 40rem;
+  border-top-right-radius: 10rem;
+  border-bottom-left-radius: 10rem;
+  position: relative;
 
+  // &::before {
+  //   content: "";
+  //   background-image: url(../images/bg-pattern-circles.svg);
+  //   background-repeat: no-repeat;
+  //   width: 300%;
+  //   height: 300%;
+  //   position: absolute;
+  //   top: -50vw;
+  //   left: -10vw;
+  //   overflow: hidden;
+  // }
+
+  &__text {
+    width: 40%;
+    margin-right: auto;
+    margin-left: 5vw;
+    z-index: 10;
+
+    p {
+      width: 90%;
+    }
+  }
   &__illustration {
-    grid-row: span 2;
+    margin-left: 8vw;
+    transform: translateY(2rem);
+    z-index: 10;
+    overflow: visible;
   }
 }
