@@ -5,3 +5,4 @@ This is a solution to the [Blogr landing page challenge on Frontend Mentor](http
 The site is built desktop first and fully responsive for all screens.
 I used Sass, and Vanilla JS only for the mobile menu.
 The layout is done using mostly flexbox, with grid only for the footer.
+Live Site URL: [Blogr Landing Page](https://blogr-paulcave.netlify.app/)
