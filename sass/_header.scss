@@ -153,19 +153,20 @@
     }
 
     &:hover,
-    &:active,
-    &:focus {
+    &:active {
       text-decoration: underline;
       opacity: 1;
     }
   }
 
-  &__item:hover > ul,
-  &__item:focus-within > ul,
-  &__item ul:hover,
-  &__item ul:focus {
-    visibility: visible;
-    display: flex;
+  @media only screen and(min-width: $bp-phone) {
+    &__item:hover > ul,
+    &__item:focus-within > ul,
+    &__item ul:hover,
+    &__item ul:focus {
+      visibility: visible;
+      display: flex;
+    }
   }
 
   &__dropdown {
@@ -224,8 +225,7 @@
           }
         }
         &:hover,
-        &:active,
-        &:focus {
+        &:active {
           font-weight: 500;
           opacity: 1;
         }
@@ -249,8 +249,7 @@
     }
 
     &:hover,
-    &:active,
-    &:focus {
+    &:active {
       text-decoration: underline;
       opacity: 1;
     }
@@ -270,6 +269,7 @@
     width: 5rem;
     height: 5rem;
     margin-left: auto;
+    cursor: pointer;
 
     @media only screen and(max-width: $bp-phone) {
       display: flex;
@@ -286,5 +286,7 @@
 }
 
 .hidden {
-  display: none;
+  @media only screen and(max-width: $bp-phone) {
+    display: none;
+  }
 }
