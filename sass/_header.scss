@@ -9,9 +9,13 @@
   background-position: center;
 
   min-height: 70vh;
-  border-bottom-left-radius: 10rem;
+  border-bottom-left-radius: var(--border-radius-background);
 
   padding: 5rem var(--padding-body-desktop);
+
+  @media only screen and(max-width: $bp-phone) {
+    min-height: 90vh;
+  }
 
   &__intro {
     display: flex;
@@ -30,30 +34,64 @@
 .navigation {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+
   margin: 0 auto;
   max-width: 120rem;
 
   &__logo {
     margin-right: 6rem;
+    width: 10rem;
+
+    @media only screen and(max-width: $bp-small) {
+      margin-right: 3rem;
+    }
+  }
+
+  &__elements {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    @media only screen and(max-width: $bp-phone) {
+      flex-direction: column;
+    }
   }
 
   &__list {
     display: flex;
+
+    @media only screen and(max-width: $bp-phone) {
+      flex-direction: column;
+    }
   }
 
   &__item {
     list-style: none;
-    font-weight: 500;
-    color: var(--color-white);
-    opacity: 0.75;
     position: relative;
-    cursor: pointer;
 
-    &:not(:last-child) {
-      margin-right: 4rem;
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: orangered;
+      width: 7.5rem;
+      height: 120%;
+      left: 0;
+      top: 100%;
+      opacity: 0;
     }
+  }
 
+  &__link {
+    position: relative;
+    margin-right: 4rem;
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: var(--color-white);
+      font-weight: 500;
+      opacity: 0.75;
+    }
     &::after {
       content: "";
       position: absolute;
@@ -66,8 +104,58 @@
     }
 
     &:hover,
-    &:active {
+    &:active,
+    &:focus {
       text-decoration: underline;
+      opacity: 1;
+    }
+  }
+
+  &__item:hover > ul,
+  &__item:focus-within > ul,
+  &__item ul:hover,
+  &__item ul:focus {
+    visibility: visible;
+    display: flex;
+  }
+
+  &__dropdown {
+    position: absolute;
+    left: -2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-white);
+    padding: 2.5rem 2rem 2.5rem 2rem;
+    width: 15rem;
+    margin-top: 2rem;
+    border-radius: 0.5rem;
+
+    visibility: hidden;
+    display: none;
+
+    li {
+      list-style: none;
+
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+
+      a {
+        text-decoration: none;
+
+        &:link,
+        &:visited {
+          color: var(--color-black-blue);
+          font-size: 1.4rem;
+          opacity: 0.9;
+        }
+        &:hover,
+        &:active,
+        &:focus {
+          font-weight: 500;
+          opacity: 1;
+        }
+      }
     }
   }
 
@@ -81,5 +169,40 @@
     display: inline-block;
     color: var(--color-white);
     opacity: 0.75;
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: underline;
+      opacity: 1;
+    }
+
+    @media only screen and(max-width: $bp-phone) {
+      margin: auto;
+    }
   }
+
+  &__phone-menu {
+    display: none;
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    margin-left: auto;
+
+    @media only screen and(max-width: $bp-phone) {
+      display: flex;
+      place-items: center;
+    }
+  }
+
+  &__hamburger {
+    position: absolute;
+  }
+  &__close {
+    position: absolute;
+  }
+}
+
+.hidden {
+  display: none;
 }

@@ -12,11 +12,23 @@
   &-1 {
     font-size: 6rem;
     margin-bottom: 1.5rem;
+    text-align: center;
+
+    @media only screen and(max-width: $bp-medium) {
+      font-size: 5.5rem;
+    }
+    @media only screen and(max-width: $bp-phone) {
+      font-size: 5rem;
+    }
   }
   &-2 {
     font-size: 3.8rem;
     font-weight: 600;
     margin-bottom: 2.5rem;
+
+    @media only screen and(max-width: $bp-small) {
+      font-size: 3.3rem;
+    }
   }
   &-3 {
     font-size: 2.7rem;
@@ -26,6 +38,10 @@
     font-size: 2rem;
     font-weight: 300;
     margin-bottom: 4rem;
+
+    @media only screen and(max-width: $bp-medium) {
+      font-size: 1.8rem;
+    }
   }
   &-5 {
     font-size: 1.5rem;
@@ -69,7 +85,8 @@ li {
     color: var(--color-primary-red);
 
     &:hover,
-    &:active {
+    &:active,
+    &:focus {
       background-color: var(--color-primary-red-light);
       color: var(--color-white);
     }
@@ -80,7 +97,8 @@ li {
     border: 1px solid var(--color-white);
 
     &:hover,
-    &:active {
+    &:active,
+    &:focus {
       background-color: var(--color-white);
       color: var(--color-primary-red);
     }

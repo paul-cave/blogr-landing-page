@@ -6,9 +6,26 @@
   padding: 5rem 0;
   margin-top: 6rem;
 
+  @media only screen and(max-width: $bp-phone) {
+    flex-direction: column;
+    margin-top: 3rem;
+  }
+
   &__text {
     width: 35%;
     margin-right: var(--padding-body-desktop);
+
+    @media only screen and(max-width: $bp-medium) {
+      width: 40%;
+    }
+    @media only screen and(max-width: $bp-small) {
+      width: 45%;
+    }
+    @media only screen and(max-width: $bp-phone) {
+      width: 85%;
+      text-align: center;
+      margin-top: 4rem;
+    }
   }
 
   &__illustration {
@@ -20,9 +37,18 @@
     display: flex;
     justify-content: flex-start;
 
-    &--desktop {
+    @media only screen and(max-width: $bp-phone) {
+      width: 100%;
+    }
+
+    &--image {
       width: 150%;
       transform: translateX(-28.5%);
+
+      @media only screen and(max-width: $bp-phone) {
+        width: 100%;
+        transform: translateX(0);
+      }
     }
   }
 }
