@@ -16,6 +16,7 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <script defer src="./script.js"></script>
 
     <title>Frontend Mentor | [Blogr]</title>
   </head>
@@ -30,8 +31,10 @@
         <div class="navigation__elements">
           <ul class="navigation__list">
             <li class="navigation__item">
-              <a class="navigation__link" href="">Product</a>
-              <ul class="navigation__dropdown">
+              <a class="navigation__link navigation__link--active" href=""
+                >Product</a
+              >
+              <ul class="navigation__dropdown navigation__dropdown--active">
                 <li><a href="#">Overview</a></li>
                 <li><a href="#">Pricing</a></li>
                 <li><a href="#">Marketplace</a></li>
@@ -60,7 +63,7 @@
             </li>
           </ul>
           <a href="#" class="navigation__login">Login</a>
-          <a href="#" class="btn btn--white">Sign Up</a>
+          <a href="#" class="btn btn--white btn--nav">Sign Up</a>
         </div>
 
         <div class="navigation__phone-menu">
@@ -72,7 +75,7 @@
           <img
             src="./images/icon-close.svg"
             alt="close icon"
-            class="navigation__close"
+            class="navigation__close hidden"
           />
         </div>
       </nav>

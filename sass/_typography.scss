@@ -103,4 +103,20 @@ li {
       color: var(--color-primary-red);
     }
   }
+
+  &--nav {
+    @media only screen and(max-width: $bp-phone) {
+      background-color: unset;
+      background-image: linear-gradient(
+        to left,
+        $color-gradient-red,
+        $color-gradient-red-light
+      );
+      color: var(--color-white);
+      font-size: 1.8rem;
+      padding: 1.6rem;
+      border-radius: 5rem;
+      width: 16rem;
+    }
+  }
 }
